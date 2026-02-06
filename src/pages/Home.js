@@ -67,7 +67,7 @@ export default function Home() {
               <h1 className="display-4 fw-bold lh-1">About Our Platform</h1>
               <p className="lead">
                 This Fullstack Application is designed to demonstrate CRUD operations, Authentication, and User Management. 
-                It leverages the power of React for a dynamic frontend and a robust backend API.
+                It leverages the power of React for a dynamic frontend and a robust backend APIs.
               </p>
             </div>
             <div className="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
