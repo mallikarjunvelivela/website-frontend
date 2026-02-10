@@ -84,7 +84,7 @@ export default function Home() {
           <div className="feature col">
             <h2>User Management</h2>
             <p>Comprehensive tools to add, update, and manage user profiles seamlessly.</p>
-            <Link to="/allusers" className="btn btn-outline-primary">Go to Users</Link>
+            <Link to="/allusers" className="btn btn-outline-primary loader">Go to Users</Link>
           </div>
           <div className="feature col">
             <h2>Authentication</h2>
