@@ -12,6 +12,7 @@ import Account from './pages/Account';
 import { useContext } from 'react';
 import { AuthContext } from './context/AuthContext'; 
 import IdleTimeoutModal from './components/IdleTimeoutModal';
+import GlobalLoader from './components/GlobalLoader';
 
 const AppRoutes = () => {
   const { auth } = useContext(AuthContext); 
@@ -34,6 +35,7 @@ function App() {
   return (
     <div className="App d-flex flex-column" style={{ minHeight: '100vh' }}>
       <Router>
+        <GlobalLoader />
         <Navbar/>
         <AppRoutes />
         <IdleTimeoutModal show={isIdle} onContinue={handleContinueSession} onSignOut={handleSignOut} countdown={countdown} />

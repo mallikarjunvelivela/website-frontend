@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 
 export default function ViewUser() {
 
-    const [user, getuser] = useState({
+    const [user, setUser] = useState({
         name: "",
         username: "",
         email: "",
@@ -19,8 +19,12 @@ export default function ViewUser() {
     }, [])
 
     const loadUser = async () => {
-        const result = await axios.get(`/user/${id}`);
-        getuser(result.data);
+        try {
+            const result = await axios.get(`/user/${id}`);
+            setUser(result.data);
+        } catch (error) {
+            console.error("Error loading user:", error);
+        }
     }
     
     return (
